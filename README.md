@@ -12,8 +12,8 @@ Download and run the package in your sandbox if you don't trust me.
 
 ### Dependencies
 
-* Debian/Ubuntu
-* RedHat/Fedora 
+* Debian/Ubuntu for .deb file
+* RedHat/Fedora for .rpm file
 
 #### Screenshots 
 
