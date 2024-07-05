@@ -26,7 +26,5 @@ Testing Electron Publisher for GitHub.
 
 ### Screenshots 
 
-<figure style="margin: auto; padding: 4px;">
 <img src ="images/screenshot_system.png" alt="System Theme" width="30%"/><img src ="images/screenshot_light.png" alt="Light Theme" width="30%"/><img src ="images/screenshot_dark.png" alt="Dark Theme" width="30%"/>
-<figcaption style="text-align: center;">System (Auto), Light, and Dark modes.</figcaption>
-</figure>
+<p style="text-align: center;">System (Auto), Light, and Dark modes.</p>
