@@ -12,21 +12,22 @@ Testing Electron Publisher environment workflows for GitHub.
 2. Download the package relative to your system's architecture. 
 3. Run it in your sandbox/vm/container if you don't trust me. (You have options)
  - ### On Debian/Ubuntu 
-   - ``` dpkg install path/to/electron-tutorial_1.0.0_amd64.deb ```
-   - ``` apt install path/to/electron-tutorial_1.0.0_amd64.deb ```
-   - ``` gdebi install path/to/electron-tutorial_1.0.0_amd64.deb ```
+   - [dpkg](https://www.dpkg.org/) - ``` dpkg install path/to/electron-tutorial_1.0.0_amd64.deb ```
+   - [apt](https://ubuntu.com/server/docs/package-management) - ``` apt install path/to/electron-tutorial_1.0.0_amd64.deb ```
+   - [gdebi](https://manpages.ubuntu.com/manpages/bionic/man1/gdebi.1.html) - ``` gdebi install path/to/electron-tutorial_1.0.0_amd64.deb ```
  - ### On Redhat/Fedora
-   - ``` dnf install path/to/electron-tutorial-1.0.0-1.x86_64.rpm ```
-   - ``` rpm install path/to/electron-tutorial-1.0.0-1.x86_64.rpm ```
+   - [dnf](https://docs.fedoraproject.org/en-US/quick-docs/dnf/) - ``` dnf install path/to/electron-tutorial-1.0.0-1.x86_64.rpm ```
+   - [rpm](https://rpm-software-management.github.io/rpm/man/rpm.8.html) ``` rpm install path/to/electron-tutorial-1.0.0-1.x86_64.rpm ```
 
  - ### On Windows 10/11
-   - ``` electron_tutorial-1.0.0-full.nupkg ```
-   - ``` electron-tutorial-1.0.0 Setup.exe ```
+   - [NuGet](https://fileinfo.com/extension/nupkg) - ``` electron_tutorial-1.0.0-full.nupkg ```
+   - [Explorer](https://support.microsoft.com/en-us/windows/find-and-open-file-explorer-ef370130-1cca-9dc5-e0df-2f7416fe1cb1#WindowsVersion=Windows_10) - ``` electron-tutorial-1.0.0 Setup.exe ```
 
 ### Dependencies
 
 * (x86_64 --arch) Debian/Ubuntu for .deb file
 * (x86_64 --arch) RedHat/Fedora for .rpm file
+* (Win32 / x64 --arch) Windows 10/11
 
 ### Screenshots 
 Linux 🐧
