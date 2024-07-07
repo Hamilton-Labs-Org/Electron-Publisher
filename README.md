@@ -43,7 +43,7 @@ Linux 🐧
 
 Windows 🪟
 
-<img src ="images/w_system_screenshot.png" alt="System Theme" width="30%" style="margin: 0.5%" /><img src ="images/w_light_screenshot.png" alt="Light Theme" width="30%" style="margin: 0.5%"/><img src ="images/w_dark_screenshot.png" alt="Dark Theme" width="30%" style="margin: 0.5%"/>
+<img src ="images/w_system_screenshot.png" alt="System Theme" width="30%" style="margin: 0.5%;" /><img src ="images/w_light_screenshot.png" alt="Light Theme" width="30%" style="margin: 0.5%;"/><img src ="images/w_dark_screenshot.png" alt="Dark Theme" width="30%" style="margin: 0.5%;"/>
 <p style="text-align: center; margin-left: auto; margin-right: auto;">System (Auto), Light, and Dark modes.</p>
 
 You know what's next... (Hint 🍏)
