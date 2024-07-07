@@ -19,12 +19,22 @@ Testing Electron Publisher for GitHub.
    - ``` dnf install path/to/electron-tutorial-1.0.0-1.x86_64.rpm ```
    - ``` rpm install path/to/electron-tutorial-1.0.0-1.x86_64.rpm ```
 
+ - On Windows 10/11
+   - ``` electron_tutorial-1.0.0-full.nupkg ```
+   - ``` electron-tutorial-1.0.0 Setup.exe ```
+
 ### Dependencies
 
 * (x86_64 --arch) Debian/Ubuntu for .deb file
 * (x86_64 --arch) RedHat/Fedora for .rpm file
 
 ### Screenshots 
+Linux 🐧
 
 <img src ="images/screenshot_system.png" alt="System Theme" width="30%"/><img src ="images/screenshot_light.png" alt="Light Theme" width="30%"/><img src ="images/screenshot_dark.png" alt="Dark Theme" width="30%"/>
+<p style="text-align: center; margin-left: auto; margin-right: auto;">System (Auto), Light, and Dark modes.</p>
+
+Windows 🪟
+
+<img src ="images/w_system_screenshot.png" alt="System Theme" width="30%"/><img src ="images/w_light_screenshot.png" alt="Light Theme" width="30%"/><img src ="images/w_dark_screenshot.png" alt="Dark Theme" width="30%"/>
 <p style="text-align: center; margin-left: auto; margin-right: auto;">System (Auto), Light, and Dark modes.</p>
