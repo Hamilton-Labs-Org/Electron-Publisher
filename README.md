@@ -1,10 +1,10 @@
 # Electron Publisher Test
 
-Test Electron Publisher for GitHub.
+Test of [Electron Publisher](https://www.electronjs.org/docs/latest/tutorial/tutorial-publishing-updating) for GitHub [here](https://github.com/hamilton-labs/Electron-Publisher).
 
 ## Description
 
-Testing Electron Publisher for GitHub.
+Testing Electron Publisher environment workflows for GitHub.
 
 ## Getting Started
 
