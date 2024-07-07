@@ -38,7 +38,7 @@ Testing Electron Publisher environment workflows for GitHub.
 
 Linux 🐧
 
-<img src ="images/screenshot_system.png" alt="System Theme" width="30%"/> <img src ="images/screenshot_light.png" alt="Light Theme" width="30%"/> <img src ="images/screenshot_dark.png" alt="Dark Theme" width="30%"/>
+<img src ="images/screenshot_system.png" alt="System Theme" width="30%" style="padding: 0.5%;"/> <img src ="images/screenshot_light.png" alt="Light Theme" width="30%" style="padding: 0.5%;"/> <img src ="images/screenshot_dark.png" alt="Dark Theme" width="30%" style="padding: 0.5%;"/>
 <p style="text-align: center; margin-left: auto; margin-right: auto;">System (Auto), Light, and Dark modes.</p>
 
 Windows 🪟
