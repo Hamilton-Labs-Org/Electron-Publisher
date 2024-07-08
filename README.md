@@ -26,24 +26,32 @@ Testing Electron Publisher environment workflows for GitHub.
 - ### On Windows 10/11
 
   - [NuGet](https://fileinfo.com/extension/nupkg) - ``` electron_tutorial-1.0.0-full.nupkg ```
-  - [Explorer](https://support.microsoft.com/en-us/windows/find-and-open-file-explorer-ef370130-1cca-9dc5-e0df-2f7416fe1cb1#WindowsVersion=Windows_10) - ``` electron-tutorial-1.0.0 Setup.exe ```
+  - [Explorer](https://support.microsoft.com/en-us/windows/find-and-open-file-explorer-ef370130-1cca-9dc5-e0df-2f7416fe1cb1#WindowsVersion=Windows_10) - ``` "electron-tutorial-1.0.0 Setup.exe" ```
+
+- ### On MacOS
+
+  - [Terminal](https://support.apple.com/guide/terminal/execute-commands-and-run-tools-apdb66b5242-0d18-49fc-9c47-a2498b7c91d5/mac) - ``` open path/to/electron-tutorial.app ```
+  - [Terminal](https://support.apple.com/guide/terminal/compress-and-uncompress-file-archives-apdc52250ee-4659-4751-9a3a-8b7988150530/mac) - ``` unzip path/to/electron-tutorial-darwin-x64-1.0.0.zip ```
 
 ### Dependencies
 
 - (x86_64 --arch) Debian/Ubuntu for .deb file
 - (x86_64 --arch) RedHat/Fedora for .rpm file
 - (x86_64 --arch) Windows 10/11
+- (x86_64 --arch) MacOS/Darwin
 
 ### Screenshots
+
+<p style="text-align: center; margin-left: auto; margin-right: auto;">System (Auto), Light, and Dark modes.</p>
 
 Linux 🐧
 
 <img src ="images/screenshot_system.png" alt="System Theme" width="30%" style="padding: 0.5%;"/> <img src ="images/screenshot_light.png" alt="Light Theme" width="30%" style="padding: 0.5%;"/> <img src ="images/screenshot_dark.png" alt="Dark Theme" width="30%" style="padding: 0.5%;"/>
-<p style="text-align: center; margin-left: auto; margin-right: auto;">System (Auto), Light, and Dark modes.</p>
 
 Windows 🪟
 
 <img src ="images/w_system_screenshot.png" alt="System Theme" width="30%" style="padding: 0.5%;" /> <img src ="images/w_light_screenshot.png" alt="Light Theme" width="30%" style="padding: 0.5%;"/> <img src ="images/w_dark_screenshot.png" alt="Dark Theme" width="30%" style="padding: 0.5%;"/>
-<p style="text-align: center; margin-left: auto; margin-right: auto;">System (Auto), Light, and Dark modes.</p>
 
-You know what's next... (Hint 🍏)
+MacOS 🍏
+
+<img src ="images/m-system-screenshot.png" alt="System Theme" width="30%" style="padding: 0.2%;" /> <img src ="images/m_light_screenshot.png" alt="Light Theme" width="30%" style="padding: 0.2%;"/> <img src ="images/m_dark_screenshot.png" alt="Dark Theme" width="30%" style="padding: 0.2%;"/>
