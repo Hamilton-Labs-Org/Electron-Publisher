@@ -54,4 +54,4 @@ Windows 🪟
 
 MacOS 🍏
 
-<img src ="images/m-system-screenshot.png" alt="System Theme" width="30%" style="padding: 0.2%;" /> <img src ="images/m_light_screenshot.png" alt="Light Theme" width="30%" style="padding: 0.2%;"/> <img src ="images/m_dark_screenshot.png" alt="Dark Theme" width="30%" style="padding: 0.2%;"/>
+<img src ="images/m-system-screenshot.png" alt="System Theme" width="30%" style="padding: 0.02%;" /> <img src ="images/m_light_screenshot.png" alt="Light Theme" width="30%" style="padding: 0.02%;"/> <img src ="images/m_dark_screenshot.png" alt="Dark Theme" width="30%" style="padding: 0.02%;"/>
