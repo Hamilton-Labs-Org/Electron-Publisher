@@ -2,9 +2,10 @@
   "name": "electron-tutorial",
   "version": "1.0.2",
   "description": "Electron Tutorial",
-  "main": "main.js",
+  "main": "./out/main/index.js",
   "scripts": {
     "start": "electron-forge start",
+    "dev": "electron-vite dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "package": "electron-forge package",
     "make": "electron-forge make",
@@ -23,7 +24,8 @@
     "@electron-forge/plugin-fuses": "^7.4.0",
     "@electron-forge/publisher-github": "^7.4.0",
     "@electron/fuses": "^1.8.0",
-    "electron": "31.1.0"
+    "electron": "31.1.0",
+    "electron-vite": "^2.3.0"
   },
   "dependencies": {
     "cross-spawn-promise": "^0.10.2",

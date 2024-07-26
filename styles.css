@@ -9,3 +9,14 @@
   @media (prefers-color-scheme: light) {
     body { background: #ddd; color: black; }
   }
+
+  @font-face {
+      /* #region */
+      font-family: 'AnonymiceProNerdFont-Italic';
+      src: local("./fonts/AnonymiceProNerdFont-Italic") format("truetype");
+      src: url("./fonts/AnonymiceProNerdFont-Italic.ttf") format("truetype");
+  }
+
+  h1 {
+    font-family: "AnonymiceProNerdFont-Italic";
+}
