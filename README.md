@@ -8,7 +8,7 @@ Testing Electron Publisher environment workflows for GitHub.
 
 ## Getting Started
 
-1. Head over to the [Releases](https://github.com/hamilton-labs/Electron-Publisher/releases) section.
+1. Head over to the [Tagged Releases](https://github.com/hamilton-labs/Electron-Publisher/tags) section.
 2. Download the package relative to your system's architecture.
 3. Run it in your sandbox/vm/container if you don't trust me. (You have options)
 
@@ -17,6 +17,14 @@ Testing Electron Publisher environment workflows for GitHub.
   - [dpkg](https://www.dpkg.org/) - ``` dpkg install path/to/electron-tutorial_1.0.0_amd64.deb ```
   - [apt](https://ubuntu.com/server/docs/package-management) - ``` apt install path/to/electron-tutorial_1.0.0_amd64.deb ```
   - [gdebi](https://manpages.ubuntu.com/manpages/bionic/man1/gdebi.1.html) - ``` gdebi install path/to/electron-tutorial_1.0.0_amd64.deb ```
+  
+
+- ### On Arch Linux
+
+  - [debtap](https://github.com/helixarch/debtap?tab=readme-ov-file#) - ``` debtap path/to/electron-tutorial_1.0.0_amd64.deb ```
+  - [pacman](https://wiki.archlinux.org/title/Pacman) - ``` pacman -U /path/to/electron-tutorial_1.0.0_amd64.pkg.tar.zst ```
+
+
 
 - ### On Redhat/Fedora
 
