@@ -8,6 +8,11 @@ export default defineConfig({
         input: {
           index: resolve(__dirname, './src/main/main.js')
         }
+      },
+      watch: {
+        "buildDelay": 0,
+        "include": 'src/**',
+        "skipWrite": false
       }
     }
   },
@@ -17,8 +22,13 @@ export default defineConfig({
         input: {
           index: resolve(__dirname, './src/preload/index.ts')
         }
+      },
+      watch: {
+        "buildDelay": 0,
+        "include": 'src/**',
+        "skipWrite": false
       }
-    }
+    },
   },
   renderer: {
     root: './src/renderer',
@@ -27,6 +37,11 @@ export default defineConfig({
         input: {
           index: resolve(__dirname, 'index.html')
         }
+      },
+      watch: {
+        "buildDelay": 0,
+        "include": 'src/**',
+        "skipWrite": false
       }
     }
   }

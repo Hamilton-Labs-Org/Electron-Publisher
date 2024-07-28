@@ -11,25 +11,25 @@
       http-equiv="X-Content-Security-Policy"
       content="default-src 'self'; script-src 'self'"
     />
-    <title>Hello from Electron renderer!</title>
+    <title>Hello from Electron Vite renderer!</title>
     <link rel="stylesheet" type="text/css" href="./styles.css">
   </head>
   <body>
-    <h1>Hello from Electron renderer! 👋🏾</h1>
-    <p>👨🏾‍💻</p>
     <p id="info"></p>
-    <a href="https://github.com/hamilton-labs?tab=repositories">
-      <img src="./images/icon.png" alt="Hamilton Labs Logo" width="50" height="50">
-    </a> 
-    <div style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
-      <div>
-        <h1>This is your text</h1>
+    <div id="outerIndex" >
+      <div id="innerIndex">
+        <div class="border-box">
+          <a href="https://github.com/hamilton-labs?tab=repositories">
+            <img src="./images/icon.png" alt="Hamilton Labs Logo" width="20%" style="padding: 10px; overflow: hidden;">
+          </a> 
+        </div>
+        <h1>Hamilton Labs Test</h1>
+        <p>Current theme source: <strong id="theme-source">System</strong></p>
+      <button id="toggle-dark-mode">Toggle Dark Mode</button>
+      <button id="reset-to-system">Reset to System Theme</button>
+      <button id=""><a href="home.html">Link to Home Page</a></button>
       </div>
     </div>
-    <p>Current theme source: <strong id="theme-source">System</strong></p>
-    <button id="toggle-dark-mode">Toggle Dark Mode</button>
-    <button id="reset-to-system">Reset to System Theme</button>
-    <button id=""><a href="home.html">Link to Home Page</a></button>
   </body>
   <script src="./renderer.js"></script>
 </html>

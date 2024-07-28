@@ -37,17 +37,24 @@ ipcMain.handle('dark-mode:system', () => {
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 800,
-    height: 600,
     icon: appIcon,
     images: true,
+    overlay: appIcon,
     webPreferences: {
-        preload: path.join(__dirname, 'preload.js')
+        preload: path.join(__dirname, 'src\preload\preload.js')
     }
   })
 
-
   win.loadFile('index.html')
   win.setOverlayIcon(overlay, description)
+
+  // Load the local URL for development or the local
+  // html file for production
+  if (!app.isPackaged && process.env['ELECTRON_RENDERER_URL']) {
+    win.loadURL(process.env['ELECTRON_RENDERER_URL'])
+  } else {
+    win.loadFile(path.join(__dirname, 'src/renderer/index.html'))
+  }
 }
 
 console.log('Hello from Electron 👋🏾')
