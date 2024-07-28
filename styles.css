@@ -3,7 +3,7 @@
   }
   
   @media (prefers-color-scheme: dark) {
-    body { background: #333; color: white; }
+    body { background: black; color: white; }
   }
   
   @media (prefers-color-scheme: light) {
@@ -19,4 +19,41 @@
 
   h1 {
     font-family: "AnonymiceProNerdFont-Italic";
+} 
+
+#outerIndex {
+  display: table;
+  width: 100%;
+  text-align: center;
+  height: 400px;
+  /* border: 1px dashed red; */
+  vertical-align: middle;
+}
+
+#innerIndex {
+  display: table-cell;
+  margin: 0 auto;
+  /* border: 1px solid white; */
+  vertical-align: middle;
+}
+
+#logoCrop {
+  background-origin: border-box;
+  background-clip: border-box;
+} 
+
+.content-box {
+  box-sizing: content-box;
+  /* Total width: 160px + (2 * 20px) + (2 * 8px) = 216px
+     Total height: 80px + (2 * 20px) + (2 * 8px) = 136px
+     Content box width: 160px
+     Content box height: 80px */
+} 
+
+.border-box {
+  box-sizing: border-box;
+  /* Total width: 160px
+     Total height: 80px
+     Content box width: 160px - (2 * 20px) - (2 * 8px) = 104px
+     Content box height: 80px - (2 * 20px) - (2 * 8px) = 24px */
 }
