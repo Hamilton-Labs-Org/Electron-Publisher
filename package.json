@@ -1,11 +1,11 @@
 {
   "name": "electron-tutorial",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Electron Tutorial",
-  "main": "./out/main/index.cjs",
+  "main": "./out/main/index.js",
   "scripts": {
     "preview": "electron-vite preview --outDir=dist",
-    "dev": "electron-vite dev --watch --outDir=dist",
+    "dev": "electron-vite dev --watch --outDir=dist -- --trace-warnings",
     "prebuild": "electron-vite build",
     "start": "electron-forge start",
     "test": "echo \"Error: no test specified\" && exit 1",

@@ -38,6 +38,7 @@ export default defineConfig({
           index: resolve(__dirname, 'index.html')
         }
       },
+      outDir: 'out/renderer',
       watch: {
         "buildDelay": 0,
         "include": 'src/**',

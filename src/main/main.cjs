@@ -38,15 +38,16 @@ ipcMain.handle('dark-mode:system', () => {
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 800,
+    height: 600,
     icon: appIcon,
     images: true,
-    frame: false,
+    frame: true,
     webPreferences: {
         preload: path.join(__dirname, './src/preload/preload.cjs')
     }
   })
 
-  win.setOverlayIcon(nativeImage.createFromPath('./images/icon.png'), description)
+  win.setOverlayIcon(nativeImage.createFromPath('./images/Green-Alert-PNG.png'), description)
 
   // Load the local URL for development or the local
   // html file for production
@@ -57,4 +58,4 @@ const createWindow = () => {
   }
 }
 
-console.log('Hello from Electron 👋🏾')
+console.log('Loading The Hamilton Labs Apps')
