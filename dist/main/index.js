@@ -37,21 +37,22 @@ ipcMain.handle("dark-mode:system", () => {
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 800,
+    height: 600,
     icon: appIcon,
     images: true,
-    frame: false,
+    frame: true,
     webPreferences: {
       preload: path.join(__dirname, "./src/preload/preload.cjs")
     }
   });
-  win.setOverlayIcon(nativeImage.createFromPath("./images/icon.png"), description);
+  win.setOverlayIcon(nativeImage.createFromPath("./images/Green-Alert-PNG.png"), description);
   if (!app.isPackaged && process.env["ELECTRON_RENDERER_URL"]) {
     win.loadURL(process.env["ELECTRON_RENDERER_URL"]);
   } else {
     win.loadFile(path.join(__dirname, "./index.html"));
   }
 };
-console.log("Hello from Electron 👋🏾");
+console.log("Loading The Hamilton Labs Apps");
 export {
   main as default
 };
