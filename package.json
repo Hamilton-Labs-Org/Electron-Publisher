@@ -1,19 +1,22 @@
 {
   "name": "electron-tutorial",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Electron Tutorial",
-  "main": "./out/main/index.js",
+  "main": "./out/main/index.cjs",
   "scripts": {
+    "preview": "electron-vite preview --outDir=dist",
+    "dev": "electron-vite dev --watch --outDir=dist",
+    "prebuild": "electron-vite build",
     "start": "electron-forge start",
-    "dev": "electron-vite dev --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "package": "electron-forge package",
-    "make": "electron-forge make",
+    "package": "electron-vite build --outDir=dist && electron-forge package",
+    "make": "electron-vite build --outDir=dist && electron-forge make",
     "publish": "electron-forge publish"
   },
   "keywords": [],
   "author": "Terence Hamilton",
   "license": "MIT",
+  "type": "module",
   "devDependencies": {
     "@electron-forge/cli": "^7.4.0",
     "@electron-forge/maker-deb": "^7.4.0",

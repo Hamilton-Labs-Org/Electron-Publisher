@@ -9,6 +9,8 @@ app.on('window-all-closed', () => {
 
 const appIcon = nativeImage.createFromPath('./images/icon.png')
 
+const description = "The Hamilton Labs App"
+
 app.whenReady().then(() => {
     const trayIcon = nativeImage.createFromPath('./images/icon.png')
     ipcMain.handle('ping', () => 'pong')
@@ -33,27 +35,25 @@ ipcMain.handle('dark-mode:system', () => {
     nativeTheme.themeSource = 'system'
 })
 
-
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 800,
     icon: appIcon,
     images: true,
-    overlay: appIcon,
+    frame: false,
     webPreferences: {
-        preload: path.join(__dirname, 'src\preload\preload.js')
+        preload: path.join(__dirname, './src/preload/preload.cjs')
     }
   })
 
-  win.loadFile('index.html')
-  win.setOverlayIcon(overlay, description)
+  win.setOverlayIcon(nativeImage.createFromPath('./images/icon.png'), description)
 
   // Load the local URL for development or the local
   // html file for production
   if (!app.isPackaged && process.env['ELECTRON_RENDERER_URL']) {
     win.loadURL(process.env['ELECTRON_RENDERER_URL'])
   } else {
-    win.loadFile(path.join(__dirname, 'src/renderer/index.html'))
+    win.loadFile(path.join(__dirname, './index.html'))
   }
 }
 
