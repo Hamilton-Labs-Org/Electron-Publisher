@@ -6,7 +6,7 @@ export default defineConfig({
     build: {
       rollupOptions: {
         input: {
-          index: resolve(__dirname, './src/main/main.js')
+          index: resolve(__dirname, './src/main/main.cjs')
         }
       },
       watch: {
@@ -20,7 +20,7 @@ export default defineConfig({
     build: {
       rollupOptions: {
         input: {
-          index: resolve(__dirname, './src/preload/index.ts')
+          index: resolve(__dirname, './src/preload/preload.cjs')
         }
       },
       watch: {
@@ -31,7 +31,7 @@ export default defineConfig({
     },
   },
   renderer: {
-    root: './src/renderer',
+    root: '.',
     build: {
       rollupOptions: {
         input: {
