@@ -10,7 +10,7 @@ app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') app.quit()
   })
 
-const appIcon = nativeImage.createFromPath('./images/icon.png')
+const appIcon = nativeImage.createFromPath('./src/renderer/images/icon.png')
 
 const description = "The Hamilton Labs App"
 
