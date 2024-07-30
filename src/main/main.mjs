@@ -1,5 +1,8 @@
-const { app, BrowserWindow, nativeImage, Tray, ipcMain, nativeTheme } = require('electron/main')
-const path = require('node:path')
+// const { app, BrowserWindow, nativeImage, Tray, ipcMain, nativeTheme } = require('electron/main')
+// const path = require('node:path')
+
+import { app, BrowserWindow, nativeImage, Tray, ipcMain, nativeTheme } from 'electron/main'
+import path from 'path'
 
 app.disableHardwareAcceleration()
 app.commandLine.appendSwitch('ignore-gpu-blacklist');
@@ -43,7 +46,11 @@ const createWindow = () => {
     images: true,
     frame: true,
     webPreferences: {
-        preload: path.join(__dirname, './src/preload/preload.cjs')
+      nodeIntegration: true,
+      contextIsolation: true,
+      enableRemoteModule: true,
+      sandbox: false,
+      preload: path.join(app.getAppPath(), './src/preload/preload.mjs')
     }
   })
 
@@ -54,7 +61,7 @@ const createWindow = () => {
   if (!app.isPackaged && process.env['ELECTRON_RENDERER_URL']) {
     win.loadURL(process.env['ELECTRON_RENDERER_URL'])
   } else {
-    win.loadFile(path.join(__dirname, './index.html'))
+    win.loadFile(path.join(app.getAppPath(), './src/renderer/index.html'))
   }
 }
 

@@ -31,8 +31,10 @@
     "electron-vite": "^2.3.0"
   },
   "dependencies": {
+    "@electron-toolkit/preload": "^3.0.1",
     "cross-spawn-promise": "^0.10.2",
     "electron-prebuilt-compile": "^8.2.0",
-    "electron-squirrel-startup": "^1.0.1"
+    "electron-squirrel-startup": "^1.0.1",
+    "vite-plugin-commonjs-externals": "^0.1.4"
   }
 }

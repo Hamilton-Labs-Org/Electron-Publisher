@@ -1,12 +1,5 @@
-import require$$0 from "electron/main";
-import require$$1 from "node:path";
-import __cjs_mod__ from "node:module";
-const __filename = import.meta.filename;
-const __dirname = import.meta.dirname;
-const require2 = __cjs_mod__.createRequire(import.meta.url);
-var main = {};
-const { app, BrowserWindow, nativeImage, Tray, ipcMain, nativeTheme } = require$$0;
-const path = require$$1;
+import { app, nativeImage, ipcMain, Tray, BrowserWindow, nativeTheme } from "electron/main";
+import path from "path";
 app.disableHardwareAcceleration();
 app.commandLine.appendSwitch("ignore-gpu-blacklist");
 app.on("window-all-closed", () => {
@@ -42,17 +35,18 @@ const createWindow = () => {
     images: true,
     frame: true,
     webPreferences: {
-      preload: path.join(__dirname, "./src/preload/preload.cjs")
+      nodeIntegration: true,
+      contextIsolation: true,
+      enableRemoteModule: true,
+      sandbox: false,
+      preload: path.join(app.getAppPath(), "./src/preload/preload.mjs")
     }
   });
   win.setOverlayIcon(nativeImage.createFromPath("./images/Green-Alert-PNG.png"), description);
   if (!app.isPackaged && process.env["ELECTRON_RENDERER_URL"]) {
     win.loadURL(process.env["ELECTRON_RENDERER_URL"]);
   } else {
-    win.loadFile(path.join(__dirname, "./index.html"));
+    win.loadFile(path.join(app.getAppPath(), "./src/renderer/index.html"));
   }
 };
 console.log("Loading The Hamilton Labs Apps");
-export {
-  main as default
-};
