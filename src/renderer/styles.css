@@ -21,6 +21,31 @@
     font-family: "AnonymiceProNerdFont-Italic";
 } 
 
+#info {
+  font-family: sans-serif;
+}
+#infoo {
+  font-family: sans-serif;
+}
+
+#chrome {
+  color: blue;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+#node {
+  color: green;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+#electron {
+  color: purple;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
 #outerIndex {
   display: table;
   width: 100%;

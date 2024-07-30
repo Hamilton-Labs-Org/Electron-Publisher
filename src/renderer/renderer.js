@@ -1,8 +1,14 @@
 const information = document.getElementById('info')
+const chro = document.getElementById('chrome')
+const nodejs = document.getElementById('node')
+const elect = document.getElementById('electron')
 // import { versions } from 'node:process';
 // const versions = await import('node:process');
 
-information.innerText = `This app is using Chrome (v${versions.chrome()}), Node.js (v${versions.node()}), and Electron (v${versions.electron()})` 
+information.innerText = `This app is using ` 
+chro.innerText = `Chrome (v${versions.chrome()})` 
+nodejs.innerText = `Node.js (v${versions.node()})` 
+elect.innerText = `Electron (v${versions.electron()})` 
 
 
 const func = async () => {
