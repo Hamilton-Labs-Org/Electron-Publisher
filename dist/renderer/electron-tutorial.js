@@ -1,5 +1,11 @@
 const information = document.getElementById("info");
-information.innerText = `This app is using Chrome (v${versions.chrome()}), Node.js (v${versions.node()}), and Electron (v${versions.electron()})`;
+const chro = document.getElementById("chrome");
+const nodejs = document.getElementById("node");
+const elect = document.getElementById("electron");
+information.innerText = `This app is using `;
+chro.innerText = `Chrome (v${versions.chrome()})`;
+nodejs.innerText = `Node.js (v${versions.node()})`;
+elect.innerText = `Electron (v${versions.electron()})`;
 const func = async () => {
   const response = await window.versions.ping();
   console.log(response);

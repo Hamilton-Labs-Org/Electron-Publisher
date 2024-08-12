@@ -5,7 +5,7 @@ import { electronAPI } from '@electron-toolkit/preload'
 
 if (process.contextIsolated) {
   try {
-await contextBridge.exposeInMainWorld('versions', {
+ contextBridge.exposeInMainWorld('versions', {
   node: () => process.versions.node,
   chrome: () => process.versions.chrome,
   electron: () => process.versions.electron,
@@ -13,7 +13,7 @@ await contextBridge.exposeInMainWorld('versions', {
   // we can also expose variables, not just functions
 })
 
-await contextBridge.exposeInMainWorld('darkMode', {
+ contextBridge.exposeInMainWorld('darkMode', {
   toggle: () => ipcRenderer.invoke('dark-mode:toggle'),
   system: () => ipcRenderer.invoke('dark-mode:system')
 })

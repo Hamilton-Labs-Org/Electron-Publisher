@@ -1,21 +1,24 @@
-import { defineConfig, externalizeDepsPlugin } from 'electron-vite'
+import { defineConfig, bytecodePlugin, externalizeDepsPlugin } from 'electron-vite'
 import { resolve } from 'path'
 
 export default defineConfig({
   main: {
-    root: '.',
     build: {
       rollupOptions: {
         input: {
           index: resolve(__dirname, './src/main/main.mjs')
-        }
+        },
+        output: {
+          format: 'cjs'
+        },
+        plugins: [externalizeDepsPlugin(), bytecodePlugin()],
       },
-      plugins: [externalizeDepsPlugin()],
+      outDir: 'dist/main',
       watch: {
         "buildDelay": 0,
         "include": 'src/**',
         "skipWrite": false
-      }
+      },
     }
   },
   preload: {
@@ -26,14 +29,11 @@ export default defineConfig({
           index: resolve(__dirname, './src/preload/preload.mjs')
         },
         output: {
-          manualChunks(id) {
-            if (id.includes('versions')) {
-              return 'versions'
-            }
-          }
+          format: 'cjs'
         },
-        plugins: [externalizeDepsPlugin({ exclude: ['versions'] })],
+        plugins: [externalizeDepsPlugin({ exclude: ['versions'] }), bytecodePlugin()],
       },
+      outDir: 'dist/preload',
       watch: {
         "buildDelay": 0,
         "include": 'src/**',
@@ -45,14 +45,21 @@ export default defineConfig({
     },
   },
   renderer: {
-    
     build: {
       rollupOptions: {
         input: {
           index: resolve(__dirname, './src/renderer/index.html')
-        }
+        },
+        output: {
+          format: 'cjs'
+        },
+        plugins: [externalizeDepsPlugin({ exclude: ['versions'] })],
       },
-      outDir: 'out/renderer',
+      lib: {
+        name: 'umd',
+        entry: 'src\renderer\index.html'
+      },
+      outDir: 'dist/renderer',
       watch: {
         "buildDelay": 0,
         "include": 'src/**',

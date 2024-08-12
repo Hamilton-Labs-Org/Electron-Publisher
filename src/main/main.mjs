@@ -14,6 +14,8 @@ const appIcon = nativeImage.createFromPath('./src/renderer/images/icon.png')
 
 const description = "The Hamilton Labs App"
 
+let winDimensions;
+
 app.whenReady().then(() => {
     const trayIcon = nativeImage.createFromPath('./images/icon.png')
     ipcMain.handle('ping', () => 'pong')
@@ -45,24 +47,48 @@ const createWindow = () => {
     icon: appIcon,
     images: true,
     frame: true,
+    show: false,
     webPreferences: {
-      nodeIntegration: true,
+      nodeIntegration: false,
       contextIsolation: true,
-      enableRemoteModule: true,
+      enableRemoteModule: false,
       sandbox: false,
       preload: path.join(app.getAppPath(), './src/preload/preload.mjs')
     }
   })
 
-  win.setOverlayIcon(nativeImage.createFromPath('./images/Green-Alert-PNG.png'), description)
+  winDimensions = new BrowserWindow({
+    width: 1920,
+    height: 1080,
+    icon: appIcon,
+    images: true,
+    frame: true,
+    show: false,
+    webPreferences: {
+      nodeIntegration: false,
+      contextIsolation: true,
+      enableRemoteModule: false,
+      sandbox: false,
+      protocol: 'file',
+      preload: path.join(app.getAppPath(), './src/preload/preload.mjs')
+    }
+  })
 
-  // Load the local URL for development or the local
-  // html file for production
-  if (!app.isPackaged && process.env['ELECTRON_RENDERER_URL']) {
-    win.loadURL(process.env['ELECTRON_RENDERER_URL'])
-  } else {
+  win.setOverlayIcon(nativeImage.createFromPath('./images/Green-Alert-PNG.png'), description)
+  
     win.loadFile(path.join(app.getAppPath(), './src/renderer/index.html'))
-  }
-}
+
+    winDimensions.setOverlayIcon(nativeImage.createFromPath('./images/Green-Alert-PNG.png'), description)
+
+    winDimensions.loadFile(path.join(app.getAppPath(), './src/renderer/index.html'))
+
+    win.once('ready-to-show', () => {
+      win.show();
+    })
+
+    winDimensions.once('ready-to-show', () => {
+      winDimensions.show();
+    })
+} 
 
 console.log('Loading The Hamilton Labs Apps')
