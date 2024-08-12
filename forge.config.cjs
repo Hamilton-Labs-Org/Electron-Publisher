@@ -4,10 +4,10 @@ const { FuseV1Options, FuseVersion } = require('@electron/fuses');
 module.exports = {
   packagerConfig: {
     asar: true,
-    ignore: [
-      /^\/src/,
-      /(.eslintrc.json)|(.gitignore)|(electron.vite.config.ts)|(forge.config.cjs)|(tsconfig.*)/,
-    ],
+    // ignore: [
+    //   /^\/src/,
+    //   /(.eslintrc.json)|(.gitignore)|(electron.vite.config.ts)|(forge.config.cjs)|(tsconfig.*)/,
+    // ],
   },
   rebuildConfig: {},
   makers: [
@@ -43,24 +43,27 @@ module.exports = {
       // at package time, before code signing the application
       // `build` can specify multiple entry builds, which can be Main process, Preload scripts, Worker process, etc.
       // If you are familiar with Vite configuration, it will look really familiar.
-      build: [
+      config: {
+        build: [
+          {
+            // `entry` is an alias for `build.lib.entry`
+            // in the corresponding file of `config`.
+            entry: './src/main/main.mjs',
+            config: 'electron.vite.config.mjs'
+          },
         {
-          // `entry` is an alias for `build.lib.entry`
-          // in the corresponding file of `config`.
-          entry: './src/main/main.mjs',
+          entry: './src/preload/preload.mjs',
           config: 'electron.vite.config.mjs'
         },
-      {
-        entry: './src/preload/preload.mjs',
-        config: 'electron.vite.config.mjs'
+        ],
+        renderer: [
+          {
+            name: 'Hamilton Labs',
+            config: 'electron.vite.config.mjs',
+          },
+        ],
+
       },
-      ],
-      renderer: [
-        {
-          name: 'Hamilton Labs',
-          config: 'electron.vite.config.mjs',
-        },
-      ],
     },
     new FusesPlugin({
       version: FuseVersion.V1,
