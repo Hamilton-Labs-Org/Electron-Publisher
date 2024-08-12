@@ -1,12 +1,12 @@
 {
   "name": "electron-tutorial",
-  "version": "1.1.0-alpha",
-  "description": "Electron Tutorial",
-  "main": "./out/main/index.js",
+  "version": "1.1.3-alpha",
+  "description": "Electron Publisher Tutorial",
+  "main": "./dist/main/index.cjs",
   "scripts": {
     "preview": "electron-vite preview --outDir=dist",
-    "dev": "electron-vite dev --watch --outDir=dist -- --trace-warnings",
-    "prebuild": "electron-vite build",
+    "dev": "electron-vite dev VITE_CJS_TRACE=true --watch --outDir=dist -- --trace-warnings",
+    "prebuild": "electron-vite build --outDir=dist -- --trace-warnings",
     "start": "electron-forge start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "package": "electron-vite build --outDir=dist && electron-forge package",
@@ -14,7 +14,7 @@
     "publish": "electron-forge publish"
   },
   "keywords": [],
-  "author": "Terence Hamilton",
+  "author": "Hamilton Labs",
   "license": "MIT",
   "type": "module",
   "devDependencies": {
@@ -26,12 +26,14 @@
     "@electron-forge/plugin-auto-unpack-natives": "^7.4.0",
     "@electron-forge/plugin-fuses": "^7.4.0",
     "@electron-forge/publisher-github": "^7.4.0",
+    "@electron-forge/plugin-vite": "^7.4.0",
     "@electron/fuses": "^1.8.0",
     "electron": "31.1.0",
     "electron-vite": "^2.3.0"
   },
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.1",
+    "@electron/asar": "^3.2.10",
     "cross-spawn-promise": "^0.10.2",
     "electron-prebuilt-compile": "^8.2.0",
     "electron-squirrel-startup": "^1.0.1",
