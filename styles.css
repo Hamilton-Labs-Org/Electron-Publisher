@@ -13,8 +13,8 @@
   @font-face {
       /* #region */
       font-family: 'AnonymiceProNerdFont-Italic';
-      src: local("./fonts/AnonymiceProNerdFont-Italic") format("truetype");
-      src: url("./fonts/AnonymiceProNerdFont-Italic.ttf") format("truetype");
+      src: local("./assets/fonts/AnonymiceProNerdFont-Italic") format("truetype");
+      src: url("./assets/fonts/AnonymiceProNerdFont-Italic.ttf") format("truetype");
   }
 
   h1 {
