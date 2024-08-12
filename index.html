@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
@@ -11,6 +11,7 @@
       http-equiv="X-Content-Security-Policy"
       content="default-src 'self'; script-src 'self'"
     />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hamilton Labs</title>
     <link rel="stylesheet" type="text/css" href="./styles.css">
   </head>
@@ -20,7 +21,7 @@
       <div id="innerIndex">
         <div class="border-box">
           <a href="https://github.com/hamilton-labs?tab=repositories">
-            <img src="./images/icon.png" alt="Hamilton Labs Logo" width="20%" >
+            <img src="./assets/images/icon.png" alt="Hamilton Labs Logo" width="20%" >
           </a> 
         </div>
         <h1>Hamilton Labs</h1>
@@ -35,7 +36,7 @@
         <p id="info">Current theme source: <strong id="theme-source">System</strong></p>
       <button id="toggle-dark-mode">Toggle Dark Mode</button>
       <button id="reset-to-system">Reset to System Theme</button>
-      <button id=""><a href="home.html">Link to Home Page</a></button>
+      <button type="button" role="link" id=""><a href="home.html">Link to Home Page</a></button>
       </div>
     </div>
   </body>

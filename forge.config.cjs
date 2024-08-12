@@ -54,12 +54,12 @@ module.exports = {
         {
           entry: './src/preload/preload.mjs',
           config: 'electron.vite.config.mjs'
-        },
+        }
         ],
         renderer: [
           {
-            name: 'Hamilton Labs',
-            config: 'electron.vite.config.mjs',
+            name: 'win',
+            config: 'electron.vite.config.mjs'
           },
         ],
 

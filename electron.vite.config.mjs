@@ -1,4 +1,4 @@
-import { defineConfig, bytecodePlugin, externalizeDepsPlugin } from 'electron-vite'
+import { defineConfig, bytecodePlugin, externalizeDepsPlugin, resolveConfig } from 'electron-vite'
 import { resolve } from 'path'
 
 export default defineConfig({
@@ -48,24 +48,32 @@ export default defineConfig({
   renderer: {
     root: '.',
     build: {
+      // lib: {
+      //   // Could also be a dictionary or array of multiple entry points
+      //   entry: resolve(__dirname, 'index.html'), modules: true,
+      //   name: 'win',
+      //   // the proper extensions will be added
+      //   fileName: 'index.html',
+      // },
       rollupOptions: {
         input: {
-          entry: resolve(__dirname, './src/renderer/index.html')
+          main: resolve(__dirname, 'index.html' )
         },
         output: {
-          format: 'cjs'
+          manualChunks: false,
+          inlineDynamicImports: true,
+          entryFileNames: 'index.html'
         },
-        plugins: [externalizeDepsPlugin({ exclude: ['versions'] })],
-      },
-      lib: {
-        name: 'umd',
-        entry: './src/renderer/index.html'
+        plugins: [],
       },
       outDir: 'dist/renderer',
       watch: {
         "buildDelay": 0,
         "include": 'src/**',
         "skipWrite": false
+      },
+      resolve: {
+        preserveSymlinks: true,
       }
     }
   }

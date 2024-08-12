@@ -10,14 +10,14 @@ app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') app.quit()
   })
 
-const appIcon = nativeImage.createFromPath('./src/renderer/images/icon.png')
+const appIcon = nativeImage.createFromPath('./assets/images/icon.png')
 
 const description = "The Hamilton Labs App"
 
 let winDimensions;
 
 app.whenReady().then(() => {
-    const trayIcon = nativeImage.createFromPath('./images/icon.png')
+    const trayIcon = nativeImage.createFromPath('./assets/images/icon.png')
     ipcMain.handle('ping', () => 'pong')
     const tray = new Tray(trayIcon)
   createWindow()
@@ -57,38 +57,38 @@ const createWindow = () => {
     }
   })
 
-  winDimensions = new BrowserWindow({
-    width: 1920,
-    height: 1080,
-    icon: appIcon,
-    images: true,
-    frame: true,
-    show: false,
-    webPreferences: {
-      nodeIntegration: false,
-      contextIsolation: true,
-      enableRemoteModule: false,
-      sandbox: false,
-      protocol: 'file',
-      preload: path.join(app.getAppPath(), './src/preload/preload.mjs')
-    }
-  })
+  // winDimensions = new BrowserWindow({
+  //   width: 1920,
+  //   height: 1080,
+  //   icon: appIcon,
+  //   images: true,
+  //   frame: true,
+  //   show: false,
+  //   webPreferences: {
+  //     nodeIntegration: false,
+  //     contextIsolation: true,
+  //     enableRemoteModule: false,
+  //     sandbox: false,
+  //     protocol: 'file',
+  //     preload: path.join(app.getAppPath(), './src/preload/preload.mjs')
+  //   }
+  // })
 
-  win.setOverlayIcon(nativeImage.createFromPath('./images/Green-Alert-PNG.png'), description)
+  win.setOverlayIcon(nativeImage.createFromPath('./assets/images/Green-Alert-PNG.png'), description)
   
-    win.loadFile(path.join(app.getAppPath(), './src/renderer/index.html'))
+    win.loadFile(path.join(app.getAppPath(), './index.html'))
 
-    winDimensions.setOverlayIcon(nativeImage.createFromPath('./images/Green-Alert-PNG.png'), description)
+    // winDimensions.setOverlayIcon(nativeImage.createFromPath('./images/Green-Alert-PNG.png'), description)
 
-    winDimensions.loadFile(path.join(app.getAppPath(), './src/renderer/index.html'))
+    // winDimensions.loadFile(path.join(app.getAppPath(), './src/renderer/index.html'))
 
     win.once('ready-to-show', () => {
       win.show();
     })
 
-    winDimensions.once('ready-to-show', () => {
-      winDimensions.show();
-    })
+    // winDimensions.once('ready-to-show', () => {
+    //   winDimensions.show();
+    // })
 } 
 
 console.log('Loading The Hamilton Labs Apps')
