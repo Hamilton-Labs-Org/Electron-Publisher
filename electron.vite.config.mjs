@@ -3,11 +3,12 @@ import { resolve } from 'path'
 
 export default defineConfig({
   main: {
+    root: '.',
     build: {
       rollupOptions: {
-        input: {
-          index: resolve(__dirname, './src/main/main.mjs')
-        },
+        input: [
+           resolve(__dirname, './src/main/main.mjs')
+        ],
         output: {
           format: 'cjs'
         },
@@ -45,10 +46,11 @@ export default defineConfig({
     },
   },
   renderer: {
+    root: '.',
     build: {
       rollupOptions: {
         input: {
-          index: resolve(__dirname, './src/renderer/index.html')
+          entry: resolve(__dirname, './src/renderer/index.html')
         },
         output: {
           format: 'cjs'
@@ -57,7 +59,7 @@ export default defineConfig({
       },
       lib: {
         name: 'umd',
-        entry: 'src\renderer\index.html'
+        entry: './src/renderer/index.html'
       },
       outDir: 'dist/renderer',
       watch: {
