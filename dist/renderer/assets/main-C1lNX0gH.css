@@ -1,0 +1,84 @@
+:root {
+    color-scheme: light dark;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    body { background: black; color: white; }
+  }
+  
+  @media (prefers-color-scheme: light) {
+    body { background: #ddd; color: black; }
+  }
+
+  @font-face {
+      /* #region */
+      font-family: 'AnonymiceProNerdFont-Italic';
+      src: local("./assets/fonts/AnonymiceProNerdFont-Italic") format("truetype");
+      src: url("./AnonymiceProNerdFont-Italic-Bew0FSd2.ttf") format("truetype");
+  }
+
+  h1 {
+    font-family: "AnonymiceProNerdFont-Italic";
+} 
+
+#info {
+  font-family: sans-serif;
+}
+#infoo {
+  font-family: sans-serif;
+}
+
+#chrome {
+  color: blue;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+#node {
+  color: green;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+#electron {
+  color: purple;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+#outerIndex {
+  display: table;
+  width: 100%;
+  text-align: center;
+  height: 400px;
+  /* border: 1px dashed red; */
+  vertical-align: middle;
+}
+
+#innerIndex {
+  display: table-cell;
+  margin: 0 auto;
+  /* border: 1px solid white; */
+  vertical-align: middle;
+}
+
+#logoCrop {
+  background-origin: border-box;
+  background-clip: border-box;
+} 
+
+.content-box {
+  box-sizing: content-box;
+  /* Total width: 160px + (2 * 20px) + (2 * 8px) = 216px
+     Total height: 80px + (2 * 20px) + (2 * 8px) = 136px
+     Content box width: 160px
+     Content box height: 80px */
+} 
+
+.border-box {
+  box-sizing: border-box;
+  /* Total width: 160px
+     Total height: 80px
+     Content box width: 160px - (2 * 20px) - (2 * 8px) = 104px
+     Content box height: 80px - (2 * 20px) - (2 * 8px) = 24px */
+}
