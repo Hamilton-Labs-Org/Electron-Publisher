@@ -19,4 +19,6 @@ if (process.contextIsolated) {
 })
 } catch (error) {
   console.error(error)
-}}
+}} else {
+  window.electron = electronAPI
+}
