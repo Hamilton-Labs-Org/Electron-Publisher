@@ -8,6 +8,14 @@ Testing Electron Publisher environment workflows for GitHub.
 
 ## Getting Started
 
+1. Download the repo.
+2. cd /Electron-Publisher
+3. npm install
+4. npm run dev
+5. Dev...💻
+
+## Try it out
+
 1. Head over to the [Tagged Releases](https://github.com/hamilton-labs/Electron-Publisher/tags) section.
 2. Download the package relative to your system's architecture.
 3. Run it in your sandbox/vm/container if you don't trust me. (You have options)
@@ -54,12 +62,12 @@ Testing Electron Publisher environment workflows for GitHub.
 
 Linux 🐧
 
-<img src ="images/screenshot_system.png" alt="System Theme" width="30%" style="padding: 0.5%;"/> <img src ="images/screenshot_light.png" alt="Light Theme" width="30%" style="padding: 0.5%;"/> <img src ="images/screenshot_dark.png" alt="Dark Theme" width="30%" style="padding: 0.5%;"/>
+<img src ="assets\images\linux_screenshots\screenshot_system.png" alt="System Theme" width="30%" style="padding: 0.5%;"/> <img src ="assets\images\linux_screenshots\screenshot_light.png" alt="Light Theme" width="30%" style="padding: 0.5%;"/> <img src ="assets\images\linux_screenshots\screenshot_dark.png" alt="Dark Theme" width="30%" style="padding: 0.5%;"/>
 
 Windows 🪟
 
-<img src ="images/w_system_screenshot.png" alt="System Theme" width="30%" style="padding: 0.5%;" /> <img src ="images/w_light_screenshot.png" alt="Light Theme" width="30%" style="padding: 0.5%;"/> <img src ="images/w_dark_screenshot.png" alt="Dark Theme" width="30%" style="padding: 0.5%;"/>
+<img src ="assets\images\windows_screenshots\w_system_screenshot.png" alt="System Theme" width="30%" style="padding: 0.5%;" /> <img src ="assets\images\windows_screenshots\w_light_screenshot.png" alt="Light Theme" width="30%" style="padding: 0.5%;"/> <img src ="assets\images\windows_screenshots\w_dark_screenshot.png" alt="Dark Theme" width="30%" style="padding: 0.5%;"/>
 
 MacOS 🍏
 
-<img src ="images/m-system-screenshot.png" alt="System Theme" width="30%" style="padding: 0.02%;" /> <img src ="images/m_light_screenshot.png" alt="Light Theme" width="30%" style="padding: 0.02%;"/> <img src ="images/m_dark_screenshot.png" alt="Dark Theme" width="30%" style="padding: 0.02%;"/>
+<img src ="assets\images\mac_screenshots\m-system-screenshot.png" alt="System Theme" width="30%" style="padding: 0.02%;" /> <img src ="assets\images\mac_screenshots\m_light_screenshot.png" alt="Light Theme" width="30%" style="padding: 0.02%;"/> <img src ="assets\images\mac_screenshots\m_dark_screenshot.png" alt="Dark Theme" width="30%" style="padding: 0.02%;"/>
