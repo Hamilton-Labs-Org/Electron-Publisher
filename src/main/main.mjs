@@ -1,8 +1,10 @@
 // const { app, BrowserWindow, nativeImage, Tray, ipcMain, nativeTheme } = require('electron/main')
 // const path = require('node:path')
 
+
 import { app, BrowserWindow, nativeImage, Tray, ipcMain, nativeTheme } from 'electron/main'
 import path from 'path'
+
 
 app.disableHardwareAcceleration()
 app.commandLine.appendSwitch('ignore-gpu-blacklist');
