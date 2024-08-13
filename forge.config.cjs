@@ -37,34 +37,6 @@ module.exports = {
       name: '@electron-forge/plugin-auto-unpack-natives',
       config: {},
     },
-  {
-    name: '@electron-forge/plugin-vite',
-      // Fuses are used to enable/disable various Electron functionality
-      // at package time, before code signing the application
-      // `build` can specify multiple entry builds, which can be Main process, Preload scripts, Worker process, etc.
-      // If you are familiar with Vite configuration, it will look really familiar.
-      config: {
-        build: [
-          {
-            // `entry` is an alias for `build.lib.entry`
-            // in the corresponding file of `config`.
-            entry: './src/main/main.mjs',
-            config: 'electron.vite.config.mjs'
-          },
-        {
-          entry: './src/preload/preload.mjs',
-          config: 'electron.vite.config.mjs'
-        }
-        ],
-        renderer: [
-          {
-            name: 'win',
-            config: 'electron.vite.config.mjs'
-          },
-        ],
-
-      },
-    },
     new FusesPlugin({
       version: FuseVersion.V1,
       [FuseV1Options.RunAsNode]: true,

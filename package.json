@@ -1,6 +1,7 @@
 {
   "name": "electron-tutorial",
-  "version": "1.1.3-alpha",
+  "productName": "Hamilton Labs",
+  "version": "1.1.5-alpha",
   "description": "Electron Publisher Tutorial",
   "main": "./src/main/main.mjs",
   "scripts": {
@@ -27,17 +28,12 @@
     "@electron-forge/plugin-auto-unpack-natives": "^7.4.0",
     "@electron-forge/plugin-fuses": "^7.4.0",
     "@electron-forge/publisher-github": "^7.4.0",
-    "@electron-forge/plugin-vite": "^7.4.0",
-    "@electron/fuses": "^1.8.0",
-    "electron": "31.1.0",
-    "electron-vite": "^2.3.0"
+    "electron": "^31.3.1",
+    "electron-vite": "^2.3.0",
+    "@electron-toolkit/preload": "^3.0.1",
+    "@electron/asar": "^3.2.10"
   },
   "dependencies": {
-    "@electron-toolkit/preload": "^3.0.1",
-    "@electron/asar": "^3.2.10",
-    "cross-spawn-promise": "^0.10.2",
-    "electron-prebuilt-compile": "^8.2.0",
-    "electron-squirrel-startup": "^1.0.1",
-    "vite-plugin-commonjs-externals": "^0.1.4"
+    "electron-squirrel-startup": "^1.0.1"
   }
 }
