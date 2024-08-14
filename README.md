@@ -26,13 +26,10 @@ Testing Electron Publisher environment workflows for GitHub.
   - [apt](https://ubuntu.com/server/docs/package-management) - ``` apt install path/to/electron-tutorial_1.0.0_amd64.deb ```
   - [gdebi](https://manpages.ubuntu.com/manpages/bionic/man1/gdebi.1.html) - ``` gdebi install path/to/electron-tutorial_1.0.0_amd64.deb ```
   
-
 - ### On Arch Linux
 
   - [debtap](https://github.com/helixarch/debtap?tab=readme-ov-file#) - ``` debtap path/to/electron-tutorial_1.0.0_amd64.deb ```
   - [pacman](https://wiki.archlinux.org/title/Pacman) - ``` pacman -U /path/to/electron-tutorial_1.0.0_amd64.pkg.tar.zst ```
-
-
 
 - ### On Redhat/Fedora
 
@@ -70,4 +67,4 @@ Windows 🪟
 
 MacOS 🍏
 
-<img src ="assets\images\mac_screenshots\m-system-screenshot.png" alt="System Theme" width="30%" style="padding: 0.02%;" /> <img src ="assets\images\mac_screenshots\m_light_screenshot.png" alt="Light Theme" width="30%" style="padding: 0.02%;"/> <img src ="assets\images\mac_screenshots\m_dark_screenshot.png" alt="Dark Theme" width="30%" style="padding: 0.02%;"/>
+<img src ="assets\images\mac_screenshots\m_system_screenshot.png" alt="System Theme" width="30%" style="padding: 0.02%;" /> <img src ="assets\images\mac_screenshots\m_light_screenshot.png" alt="Light Theme" width="30%" style="padding: 0.02%;"/> <img src ="assets\images\mac_screenshots\m_dark_screenshot.png" alt="Dark Theme" width="30%" style="padding: 0.02%;"/>
