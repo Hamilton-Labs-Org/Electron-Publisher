@@ -1,9 +1,9 @@
-// const { app, BrowserWindow, nativeImage, Tray, ipcMain, nativeTheme } = require('electron/main')
-// const path = require('node:path')
+const { app, BrowserWindow, nativeImage, Tray, ipcMain, nativeTheme } = require('electron/main')
+const path = require('node:path')
 
 
-import { app, BrowserWindow, nativeImage, Tray, ipcMain, nativeTheme } from 'electron/main'
-import path from 'path'
+// import { app, BrowserWindow, nativeImage, Tray, ipcMain, nativeTheme } from 'electron/main'
+// import path from 'path'
 
 
 app.disableHardwareAcceleration()
@@ -18,16 +18,9 @@ const description = "The Hamilton Labs App"
 
 let winDimensions;
 
-function handleSetTitle (event, title) {
-  const webContents = event.sender
-  const win = BrowserWindow.fromWebContents(webContents)
-  win.setTitle(title)
-}
-
 app.whenReady().then(() => {
     const trayIcon = nativeImage.createFromPath('./assets/images/icon.png')
     ipcMain.handle('ping', () => 'pong')
-    ipcMain.on('set-title', handleSetTitle)
     const tray = new Tray(trayIcon)
   createWindow()
 
@@ -49,12 +42,6 @@ ipcMain.handle('dark-mode:system', () => {
     nativeTheme.themeSource = 'system'
 })
 
-ipcMain.on('set-title', (event, title) => {
-  const webContents = event.sender
-  const win = BrowserWindow.fromWebContents(webContents)
-  win.setTitle(title)
-})
-
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 800,
@@ -65,10 +52,10 @@ const createWindow = () => {
     show: false,
     webPreferences: {
       // nodeIntegration: false,
-      // contextIsolation: true,
-      // // enableRemoteModule: false,
-      // sandbox: true,
-      preload: path.join(app.getAppPath(), './dist/preload/index.cjs')
+      contextIsolation: true,
+      // enableRemoteModule: false,
+      // sandbox: false,
+      preload: path.join(app.getAppPath(), 'src/preload/preload.js')
     }
   })
 

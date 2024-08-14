@@ -69,7 +69,7 @@ export default defineConfig({
       outDir: 'dist/renderer',
       watch: {
         "buildDelay": 0,
-        "include": 'src/**',
+        "include": './renderer.js, ./index.html',
         "skipWrite": false
       },
       resolve: {
