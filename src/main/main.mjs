@@ -67,7 +67,7 @@ const createWindow = () => {
       // nodeIntegration: false,
       contextIsolation: true,
       // // enableRemoteModule: false,
-      sandbox: true,
+      sandbox: false,
       preload: path.join(app.getAppPath(), './dist/preload/preload.cjs')
     }
   })
