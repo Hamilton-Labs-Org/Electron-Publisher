@@ -43,8 +43,40 @@ Testing Electron Publisher environment workflows for GitHub.
 
 - ### On MacOS
 
+- For Zip files install via [Terminal](https://support.apple.com/guide/terminal/execute-commands-and-run-tools-apdb66b5242-0d18-49fc-9c47-a2498b7c91d5/mac)
+    Uncompress the app's archives in Terminal on Mac
   - [Terminal](https://support.apple.com/guide/terminal/compress-and-uncompress-file-archives-apdc52250ee-4659-4751-9a3a-8b7988150530/mac) - ``` unzip path/to/electron-tutorial-darwin-x64-1.0.0.zip ```
+    Open the app from the Terminal on your Mac
   - [Terminal](https://support.apple.com/guide/terminal/execute-commands-and-run-tools-apdb66b5242-0d18-49fc-9c47-a2498b7c91d5/mac) - ``` open path/to/electron-tutorial.app ```
+
+- For DMG files install via [Terminal](https://support.apple.com/guide/terminal/execute-commands-and-run-tools-apdb66b5242-0d18-49fc-9c47-a2498b7c91d5/mac)  
+
+  Mount the installer to your file system.  
+
+       hdiutil attach ~/Downloads/Hamilton.Labs.Installer.dmg  
+
+       or  
+
+       hdiutil attach path/to/Hamilton.Labs.Installer.dmg
+    If you're like me, you'll take a look around in there at this point. 🔍  
+
+        [Optional]  
+        ls -al /Volumes/Hamilton.Labs.Installer.dmg  
+
+    Copy the app to your applications folder (or wherever you'd like).  
+
+       sudo cp -R /Volumes/Hamilton.Labs.Installer/Hamilton\ Labs.app/ /Applications  
+
+    Unmount the DMG installer.  
+
+       hdiutil unmount /Volumes/Hamilton.Labs.Installer  
+
+  Enjoy! 😎  
+
+       open /Applications/Hamilton\ Labs.app  
+
+  Or you could just navigate to your downloads folder and just double-click the Hamilton.Labs.Installer.dmg as usual.  
+  (but where's the fun in that? 😁)  
 
 ### Dependencies
 
