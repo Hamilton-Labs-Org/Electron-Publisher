@@ -43,9 +43,11 @@ Testing Electron Publisher environment workflows for GitHub.
 
 - ### On MacOS
 
-- For Zip files install via [Terminal](https://support.apple.com/guide/terminal/execute-commands-and-run-tools-apdb66b5242-0d18-49fc-9c47-a2498b7c91d5/mac)
+- For Zip files install via [Terminal](https://support.apple.com/guide/terminal/execute-commands-and-run-tools-apdb66b5242-0d18-49fc-9c47-a2498b7c91d5/mac)  
+  
     Uncompress the app's archives in Terminal on Mac
-  - [Terminal](https://support.apple.com/guide/terminal/compress-and-uncompress-file-archives-apdc52250ee-4659-4751-9a3a-8b7988150530/mac) - ``` unzip path/to/electron-tutorial-darwin-x64-1.0.0.zip ```
+  - [Terminal](https://support.apple.com/guide/terminal/compress-and-uncompress-file-archives-apdc52250ee-4659-4751-9a3a-8b7988150530/mac) - ``` unzip path/to/electron-tutorial-darwin-x64-1.0.0.zip ```  
+
     Open the app from the Terminal on your Mac
   - [Terminal](https://support.apple.com/guide/terminal/execute-commands-and-run-tools-apdb66b5242-0d18-49fc-9c47-a2498b7c91d5/mac) - ``` open path/to/electron-tutorial.app ```
 
