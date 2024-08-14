@@ -17,13 +17,9 @@ if (process.contextIsolated) {
   toggle: () => ipcRenderer.invoke('dark-mode:toggle'),
   system: () => ipcRenderer.invoke('dark-mode:system')
 })
-
-contextBridge.exposeInMainWorld('electronAPI', {
-  setTitle: (title) => ipcRenderer.send('set-title', title)
-})
-
 } catch (error) {
   console.error(error)
 }} else {
   window.electron = electronAPI
 }
+

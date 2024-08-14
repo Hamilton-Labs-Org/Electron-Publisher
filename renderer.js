@@ -7,10 +7,17 @@ const elect = document.getElementById('electron')
 // import { versions } from 'node:process';
 // const versions = await import('node:process');
 
+const setButton = document.getElementById('btn')
+const titleInput = document.getElementById('title')
+
+setButton.addEventListener('click', () => {
+  const title = titleInput.value
+  window.electronAPI.setTitle(title)
+})
 
 
 information.innerText = `This app is using ` 
-chro.innerText = `Chrome (v${versions.chrome()})` 
+chro.innerText = `Chrome (v${window.versions.chrome()})` 
 nodejs.innerText = `Node.js (v${versions.node()})` 
 elect.innerText = `Electron (v${versions.electron()})` 
 
