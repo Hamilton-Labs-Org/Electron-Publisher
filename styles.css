@@ -25,6 +25,16 @@ label {
   font-family: sans-serif;
 }
 
+
+link {
+  color: white;
+}
+
+#logo {
+  padding: 5% 0% 0%;
+  width: 20%;
+}
+
 #info {
   font-family: sans-serif;
 }
