@@ -5,6 +5,7 @@ module.exports = {
   packagerConfig: {
     asar: true,
     icon: './assets/images/icon.ico',
+    darwinDarkModeSupport: true,
     // ignore: [
     //   /^\/src/,
     //   /(.eslintrc.json)|(.gitignore)|(electron.vite.config.ts)|(forge.config.cjs)|(tsconfig.*)/,
@@ -22,9 +23,33 @@ module.exports = {
       },
     },
     {
-      name: '@electron-forge/maker-zip',
-      platforms: ['darwin','linux'],
+      name: '@electron-forge/maker-wix',
+      config: {
+        language: 1033,
+        manufacturer: 'Hamilton Labs'
+      }
     },
+    {
+      name: '@electron-forge/maker-dmg',
+      config: {
+        name: 'Hamilton Labs Installer',
+        icon: './assets/images/icon.icns',
+        'icon-size': 100,
+        background: './assets/images/Installer-bg.png',
+        format: 'ULFO',
+        overwrite: true,
+        DMGContents: {
+          x: 620,
+          y: 150,
+          type: 'position',
+          path: 'out/Hamilton Labs-darwin-x64/Hamilton Labs.app'
+        },
+      },
+    },
+    // {
+    //   name: '@electron-forge/maker-zip',
+    //   platforms: ['darwin','linux'],
+    // },
     {
       name: '@electron-forge/maker-deb',
       config: {},
