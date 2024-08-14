@@ -51,7 +51,11 @@ Testing Electron Publisher environment workflows for GitHub.
     Open the app from the Terminal on your Mac
   - [Terminal](https://support.apple.com/guide/terminal/execute-commands-and-run-tools-apdb66b5242-0d18-49fc-9c47-a2498b7c91d5/mac) - ``` open path/to/electron-tutorial.app ```
 
-- For DMG files install via [Terminal](https://support.apple.com/guide/terminal/execute-commands-and-run-tools-apdb66b5242-0d18-49fc-9c47-a2498b7c91d5/mac)  | For my power users ⚡ 😎
+- For DMG files install via [Terminal](https://support.apple.com/guide/terminal/execute-commands-and-run-tools-apdb66b5242-0d18-49fc-9c47-a2498b7c91d5/mac)  | For my power users ⚡ 😎  
+
+  Download the DMG image release.
+
+       wget -P ~/Downloads https://github.com/hamilton-labs/Electron-Publisher/releases/download/v1.1.7-alpha/Hamilton.Labs.Installer.dmg
 
   Mount the installer to your file system.  
 
@@ -77,7 +81,7 @@ Testing Electron Publisher environment workflows for GitHub.
 
        open /Applications/Hamilton\ Labs.app  
 
-  Or you could just navigate to your downloads folder and just double-click the Hamilton.Labs.Installer.dmg as usual.  
+  Or you could just [download](https://github.com/hamilton-labs/Electron-Publisher/releases/download/v1.1.7-alpha/Hamilton.Labs.Installer.dmg) it from the [releases](https://github.com/hamilton-labs/Electron-Publisher/releases/tag/v1.1.7-alpha) page, then navigate to your downloads folder and just double-click the Hamilton.Labs.Installer.dmg as usual.  
   (but where's the fun in that? 🤷🏾‍♂️)  
 
 ### Dependencies
