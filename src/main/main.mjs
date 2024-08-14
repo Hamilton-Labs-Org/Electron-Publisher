@@ -65,10 +65,10 @@ const createWindow = () => {
     show: false,
     webPreferences: {
       // nodeIntegration: false,
-      // contextIsolation: true,
+      contextIsolation: true,
       // // enableRemoteModule: false,
-      // sandbox: true,
-      preload: path.join(app.getAppPath(), './dist/preload/index.cjs')
+      sandbox: true,
+      preload: path.join(app.getAppPath(), './dist/preload/preload.cjs')
     }
   })
 

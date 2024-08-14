@@ -49,10 +49,10 @@ const createWindow = () => {
     show: false,
     webPreferences: {
       // nodeIntegration: false,
-      // contextIsolation: true,
+      contextIsolation: true,
       // // enableRemoteModule: false,
-      // sandbox: true,
-      preload: path.join(main.app.getAppPath(), "./dist/preload/index.cjs")
+      sandbox: true,
+      preload: path.join(main.app.getAppPath(), "./dist/preload/preload.cjs")
     }
   });
   win.setOverlayIcon(main.nativeImage.createFromPath("./assets/images/Green-Alert-PNG.png"), description);
