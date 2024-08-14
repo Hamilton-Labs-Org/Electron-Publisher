@@ -55,7 +55,7 @@ module.exports = {
       config: {
         repository: {
           owner: 'hamilton-labs',
-          name: 'Hamilton Labs'
+          name: 'Electron-Publisher'
         },
         prerelease: true,
         draft: true
