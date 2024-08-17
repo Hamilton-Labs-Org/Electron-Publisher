@@ -3,10 +3,8 @@ const { FuseV1Options, FuseVersion } = require('@electron/fuses');
 
 module.exports = {
   packagerConfig: {
-    // set config executableName
-    productName: "Hamilton Labs",
     asar: true,
-    icon: './assets/images/icon',
+    icon: './assets/images/icon.ico',
     darwinDarkModeSupport: true,
     // ignore: [
     //   /^\/src/,
@@ -54,25 +52,11 @@ module.exports = {
     // },
     {
       name: '@electron-forge/maker-deb',
-      // set config executableName
-      config: {
-        options: {
-          icon: './assets/images/icon.png',
-          name: 'hamilton-labs',
-          productName: 'Hamilton Labs'
-      },
-      },
+      config: {},
     },
     {
       name: '@electron-forge/maker-rpm',
-      // set config executableName
-      config: {
-        options: {
-          icon: './assets/images/icon.png',
-          name: 'hamilton-labs',
-          productName: 'Hamilton Labs'
-      },
-      },
+      config: {},
     },
   ],
   plugins: [
